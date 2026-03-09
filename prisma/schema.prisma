@@ -1,0 +1,480 @@
+// This is your complete Prisma schema.
+// Learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================================
+// ENUMS
+// ============================================================================
+enum FlightType {
+  REVENUE
+  NON_REVENUE
+}
+
+enum FlightCategory {
+  INTERNATIONAL
+  DOMESTIC
+}
+
+enum FuelCardProvider {
+  EVEREST
+  AEG
+  WORLD_FUEL
+  NONE
+}
+
+enum WarningType {
+  INFO
+  WARNING
+  ERROR
+}
+
+enum WarningCategory {
+  CUSTOMS
+  CURFEW
+  PERMIT
+  COST
+  SLOTS
+  PPR
+  PARKING
+  FUEL
+  HANDLING
+  OPERATIONAL
+  NOISE
+  SECURITY
+}
+
+enum SourceType {
+  HANDLER_EMAIL
+  TARIFF_SHEET
+  AIRPORT_AIP
+  PROVIDER_PORTAL
+  CREW_REPORT
+  INTERNAL_NOTES
+  WEB
+}
+
+enum WarningStatus {
+  ACTIVE
+  DEPRECATED
+  NEEDS_REVIEW
+}
+
+enum CurfewType {
+  HARD_CURFEW        // Airport closes completely
+  NOISE_RESTRICTION  // dB limits enforced
+  SLOT_PROHIBITION   // No slots available during period
+  ECONOMIC_DETERRENT // Steep fees but operations allowed
+}
+
+enum PermitRequirement {
+  NONE
+  PPR_ONLY           // Prior Permission Required
+  LANDING_PERMIT     // Formal permit from CAA
+  OVERFLIGHT_PERMIT  // Transit permit
+  BOTH_PERMITS       // Landing + overflight
+  SECURITY_PROGRAM   // Special (e.g., KDCA DASSP)
+}
+
+// ============================================================================
+// CORE ENTITIES
+// ============================================================================
+
+model Airport {
+  id          String   @id @default(cuid())
+  icao        String   @unique
+  iata        String?
+  name        String
+  city        String?
+  lat         Float
+  lon         Float
+  elevation   Int?     // feet MSL
+  timezone    String
+  countryCode String
+  runwayLength Int?    // longest runway in feet
+  status      String   @default("active") // active, inactive, closed
+
+  // Relations
+  operations     AirportOperations?
+  fuelPrices     FuelPriceRecord[]
+  feeSchedules   FeeSchedule[]
+  warnings       AirportWarning[]
+  departures     FlightPlan[] @relation("Departure")
+  destinations   FlightPlan[] @relation("Destination")
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([countryCode])
+  @@index([icao])
+}
+
+model AirportOperations {
+  id                String    @id @default(cuid())
+  airportId         String    @unique
+  
+  // Operating hours
+  towerHoursStart   String?   // "07:00" local time
+  towerHoursEnd     String?   // "23:00" local time
+  operatesH24       Boolean   @default(false)
+  operatingNotes    String?   // "Closed Christmas Day"
+  
+  // Curfew
+  hasCurfew         Boolean   @default(false)
+  curfewType        CurfewType?
+  curfewStart       String?   // "23:00"
+  curfewEnd         String?   // "06:00"
+  curfewExceptions  String?   // "Medical/state flights only"
+  curfewPenalty     String?   // "$2,000 first offense"
+  
+  // Noise
+  noiseLimit        Float?    // dB(A) if applicable
+  noiseLimitPeriod  String?   // "23:00-07:00"
+  noiseMonitoring   Boolean   @default(false)
+  
+  // Permits & Slots
+  permitRequired    PermitRequirement @default(NONE)
+  permitLeadDays    Int       @default(0)
+  permitNotes       String?   // "Sponsor letter required"
+  slotsRequired     Boolean   @default(false)
+  slotLeadHours     Int       @default(0)
+  slotTolerance     String?   // "±15 minutes"
+  
+  // Customs & Immigration
+  customsAvailable  Boolean   @default(false)
+  customsH24        Boolean   @default(false)
+  customsHours      String?   // "08:00-22:00 Mon-Fri"
+  customsLeadHours  Int       @default(0)
+  customsLocation   String?   // "FBO" or "Separate terminal"
+  
+  // Handlers
+  handlerMonopoly   Boolean   @default(false)
+  handlerNames      String[]  // ["Signature", "Atlantic Aviation"]
+  fboCount          Int       @default(0)
+  
+  // Operational quirks
+  quirks            String?   // "Quick turn fee doubles after 5 ops/year"
+  pprMandatory      Boolean   @default(false)
+  pprLeadHours      Int       @default(0)
+  
+  // Parking
+  parkingLimited    Boolean   @default(false)
+  maxParkingDays    Int?
+  parkingNotes      String?   // "Reposition to alternate after 48hrs"
+  
+  airport           Airport   @relation(fields: [airportId], references: [id], onDelete: Cascade)
+  
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+  
+  @@index([airportId])
+}
+
+model FuelProvider {
+  id    String @id @default(cuid())
+  name  String @unique
+  providerType String @default("aggregator") // aggregator, direct
+
+  prices FuelPriceRecord[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model FuelPriceRecord {
+  id            String     @id @default(cuid())
+  airportId     String
+  fuelProviderId String
+  price         Float      // USD per gallon
+  currency      String     @default("USD")
+  unit          String     @default("USD/GAL")
+  taxIncluded   Boolean    @default(false)
+  part91_135    String     @default("both") // 91, 135, both, unknown
+
+  effectiveFrom DateTime?
+  collectedAt   DateTime   @default(now())
+  isLive        Boolean    @default(true)
+
+  sourceId      String
+  source        Source     @relation(fields: [sourceId], references: [id])
+  airport       Airport    @relation(fields: [airportId], references: [id])
+  fuelProvider  FuelProvider @relation(fields: [fuelProviderId], references: [id])
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([airportId])
+  @@index([fuelProviderId])
+}
+
+model FeeSchedule {
+  id          String   @id @default(cuid())
+  airportId   String
+
+  category    String   // Landing, Navigation, Parking, Customs, Permits, etc.
+  feeType     String   @default("AIRPORT") // AIRPORT or HANDLER
+
+  amountMin   Float?
+  amountMax   Float?
+  currency    String   @default("USD")
+  unitBasis   String   @default("PER_MOVEMENT")
+
+  conditionsJson Json?  // { applies_between: "18:00-08:00", weight_gt: 12500 }
+
+  leadTimeDays Int @default(0)
+  isEstimate   Boolean @default(false)
+  verifiedDate DateTime?
+
+  sourceId     String
+  source       Source   @relation(fields: [sourceId], references: [id])
+  airport      Airport  @relation(fields: [airportId], references: [id])
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([airportId])
+  @@index([category])
+}
+
+model AirportWarning {
+  id          String   @id @default(cuid())
+  airportId   String
+
+  type        WarningType
+  category    WarningCategory
+
+  triggerJson Json?    // { international: true, time_between: "23:00-06:00" }
+
+  leadTimeDays Int @default(0)
+  leadTimeUnit String @default("days")
+  leadTimeQualifier String?
+
+  costCurrency String @default("USD")
+  costMin      Float?
+  costMax      Float?
+  costType     String?
+
+  clarification String // Max 240 chars
+
+  verifiedDate DateTime
+  status       WarningStatus @default(ACTIVE)
+
+  sourceId     String
+  source       Source @relation(fields: [sourceId], references: [id])
+  airport      Airport @relation(fields: [airportId], references: [id])
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([airportId])
+  @@index([category])
+  @@index([status])
+}
+
+model Source {
+  id          String   @id @default(cuid())
+  sourceType  SourceType
+  reference   String
+  capturedAt  DateTime @default(now())
+  capturedBy  String?
+
+  fuelPrices  FuelPriceRecord[]
+  feeSchedules FeeSchedule[]
+  warnings    AirportWarning[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ============================================================================
+// FLIGHT PLANNING
+// ============================================================================
+
+model User {
+  id        String     @id @default(cuid())
+  email     String     @unique
+  name      String?
+  aircraft  Aircraft[]
+  createdAt DateTime   @default(now())
+}
+
+model FlightPlan {
+  id              String   @id @default(cuid())
+  
+  aircraftId      String
+  aircraft        Aircraft @relation(fields: [aircraftId], references: [id])
+  
+  departureICAO   String
+  departure       Airport  @relation("Departure", fields: [departureICAO], references: [icao])
+  
+  destinationICAO String
+  destination     Airport  @relation("Destination", fields: [destinationICAO], references: [icao])
+  
+  estimatedDeparture DateTime
+  flightType      FlightType
+  flightCategory  FlightCategory
+  fuelCard        FuelCardProvider
+  
+  showCustoms     Boolean @default(true)
+  showRangeRings  Boolean @default(true)
+  
+  routeStops      RouteStop[]
+  
+  createdAt       DateTime @default(now())
+}
+
+model RouteStop {
+  id            String     @id @default(cuid())
+  flightPlanId  String
+  flightPlan    FlightPlan @relation(fields: [flightPlanId], references: [id])
+  
+  airportICAO   String
+  sequence      Int
+  stopType      String     // "FUEL" | "TECH" | "CREW_REST"
+  
+  createdAt     DateTime   @default(now())
+  
+  @@index([flightPlanId])
+}
+
+model Aircraft {
+  id              String  @id @default(cuid())
+  registration    String  @unique
+  type            String
+  
+  fuelCapacity    Float
+  fuelBurnRate    Float
+  cruiseSpeed     Int
+  maxRange        Int
+  
+  operatorId      String
+  operator        User    @relation(fields: [operatorId], references: [id])
+  
+  flightPlans     FlightPlan[]
+}
+
+// ============================================================================
+// AIRCRAFT PERFORMANCE
+// ============================================================================
+
+model AircraftType {
+  id                  String   @id @default(cuid())
+  name                String   @unique
+  manufacturer        String
+  icaoDesignator      String?
+  maxFuelCapacityLbs  Float
+
+  performanceProfiles AircraftPerformance[]
+
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@index([manufacturer])
+}
+
+model AircraftPerformance {
+  id                  String   @id @default(cuid())
+  aircraftTypeId      String
+  version             String
+  versionNotes        String?
+
+  cruiseLevelsJson    Json
+  reservePoliciesJson Json
+
+  taxiFuelLbs         Float    @default(200)
+  windSensitivity     String   @default("standard")
+
+  sourceReference     String?
+  verifiedDate        DateTime
+  isActive            Boolean  @default(true)
+
+  aircraftType        AircraftType @relation(fields: [aircraftTypeId], references: [id], onDelete: Cascade)
+
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@unique([aircraftTypeId, version])
+  @@index([aircraftTypeId])
+  @@index([isActive])
+}
+
+// ============================================================================
+// TRIP PLANNING
+// ============================================================================
+
+model Trip {
+  id          String   @id @default(cuid())
+  createdBy   String
+  title       String
+
+  legs        TripLeg[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model TripLeg {
+  id                  String   @id @default(cuid())
+  tripId              String
+  sequence            Int
+
+  fromAirportId       String
+  toAirportId         String
+
+  plannedEtaLocal     DateTime?
+  plannedEtdLocal     DateTime?
+  plannedCruiseFL     Int?
+  paxCount            Int       @default(0)
+  petsOnboard         Boolean   @default(false)
+  isInternational     Boolean   @default(false)
+
+  selectedStopAirportId String?
+  windModelRef        String?
+
+  trip                Trip @relation(fields: [tripId], references: [id], onDelete: Cascade)
+
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@unique([tripId, sequence])
+  @@index([tripId])
+}
+
+// ============================================================================
+// STOP EVALUATION CACHE
+// ============================================================================
+
+model StopEvaluation {
+  id                  String   @id @default(cuid())
+  legId               String
+  candidateAirportId  String
+
+  timestamp           DateTime @default(now())
+
+  feasibilityStatus   String
+  hardBlockers        Json?
+
+  warningsSummary     Json?
+
+  costTotalMin        Float?
+  costTotalMax        Float?
+  costBreakdownJson   Json?
+
+  timeRiskScore       Float?
+  confidenceScore     Float?
+  rankScore           Float?
+
+  createdAt           DateTime @default(now())
+  expiresAt           DateTime @default(dbgenerated("now() + interval '1 hour'"))
+
+  @@index([legId])
+  @@index([candidateAirportId])
+  @@index([expiresAt])
+}

@@ -1,0 +1,3068 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0608,
+          40.8501
+        ]
+      },
+      "properties": {
+        "icao": "KTEB",
+        "iata": "TEB",
+        "name": "Teterboro Airport",
+        "city": "Teterboro",
+        "elevation": 9,
+        "timezone": "America/New_York",
+        "countryCode": "US",
+        "runwayLength": 7000,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "slotLeadHours": 48,
+          "slotTolerance": "Must cancel 2hrs prior if unused",
+          "noiseMonitoring": true,
+          "noiseLimit": 80,
+          "noiseLimitPeriod": "22:00-07:00",
+          "customsAvailable": true,
+          "customsH24": true,
+          "customsLocation": "FBO",
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Signature Flight Support",
+            "Jet Aviation",
+            "Atlantic Aviation",
+            "Meridian"
+          ],
+          "fboCount": 6,
+          "quirks": "3 noise violations in 2 years = permanent ban. $5M insurance required. Stage 2 aircraft voluntarily banned.",
+          "pprMandatory": true,
+          "pprLeadHours": 48,
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.2895,
+          42.4699
+        ]
+      },
+      "properties": {
+        "icao": "KBED",
+        "iata": "BED",
+        "name": "Laurence G Hanscom Field",
+        "city": "Bedford",
+        "elevation": 133,
+        "timezone": "America/New_York",
+        "countryCode": "US",
+        "runwayLength": 7011,
+        "status": "active",
+        "operations": {
+          "towerHoursStart": "07:00",
+          "towerHoursEnd": "23:00",
+          "operatesH24": false,
+          "hasCurfew": false,
+          "curfewType": "ECONOMIC_DETERRENT",
+          "customsAvailable": true,
+          "customsH24": false,
+          "customsHours": "07:00-23:00 Mon-Fri",
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Signature Flight Support",
+            "Jet Aviation",
+            "Atlantic Aviation"
+          ],
+          "fboCount": 3,
+          "quirks": "Nighttime fee (23:00-07:00): $577 per op for >12,500 lbs. Doubles after 5th operation/year to $1,154. Touch-and-go banned 23:00-07:00.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.0377,
+          38.8521
+        ]
+      },
+      "properties": {
+        "icao": "KDCA",
+        "iata": "DCA",
+        "name": "Ronald Reagan Washington National Airport",
+        "city": "Washington DC",
+        "elevation": 15,
+        "timezone": "America/New_York",
+        "countryCode": "US",
+        "runwayLength": 6869,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "slotLeadHours": 24,
+          "noiseMonitoring": true,
+          "noiseLimit": 85,
+          "noiseLimitPeriod": "22:00-07:00 (arrivals); 72dB departures",
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": true,
+          "handlerNames": [
+            "Signature Flight Support"
+          ],
+          "fboCount": 1,
+          "quirks": "Armed Security Officer required ($1,100/day). Passenger manifest 24hrs prior. TSA screening at gateway airport. Max $5,000 noise penalty.",
+          "permitRequired": "SECURITY_PROGRAM",
+          "permitLeadDays": 3,
+          "permitNotes": "DASSP (DCA Access Standard Security Program) mandatory"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.4277,
+          33.6367
+        ]
+      },
+      "properties": {
+        "icao": "KPDK",
+        "iata": "PDK",
+        "name": "DeKalb-Peachtree Airport",
+        "city": "Atlanta",
+        "elevation": 1003,
+        "timezone": "America/New_York",
+        "countryCode": "US",
+        "runwayLength": 6001,
+        "status": "active",
+        "operations": {
+          "operatesH24": false,
+          "hasCurfew": true,
+          "curfewType": "HARD_CURFEW",
+          "curfewStart": "23:00",
+          "curfewEnd": "06:00",
+          "curfewExceptions": "None - strictly enforced for turbojets",
+          "customsAvailable": true,
+          "customsH24": false,
+          "customsLeadHours": 2,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Signature Flight Support",
+            "Atlantic Aviation",
+            "Epps Aviation"
+          ],
+          "fboCount": 5,
+          "quirks": "No high-power engine run-ups 22:00-07:00. Short runway (6,001 ft) limits heavy jets.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.4898,
+          34.2098
+        ]
+      },
+      "properties": {
+        "icao": "KVNY",
+        "iata": "VNY",
+        "name": "Van Nuys Airport",
+        "city": "Van Nuys",
+        "elevation": 802,
+        "timezone": "America/Los_Angeles",
+        "countryCode": "US",
+        "runwayLength": 8001,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": true,
+          "curfewType": "HARD_CURFEW",
+          "curfewStart": "23:00",
+          "curfewEnd": "07:00",
+          "curfewExceptions": "Departures only. Arrivals unrestricted 24/7.",
+          "noiseMonitoring": true,
+          "noiseLimit": 77,
+          "noiseLimitPeriod": "All operations",
+          "customsAvailable": false,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Clay Lacy Aviation",
+            "Castle & Cooke",
+            "Signature Flight Support"
+          ],
+          "fboCount": 5,
+          "quirks": "World's busiest GA airport. No touch-and-go 21:00-07:00. Non-Stage 3 curfew 22:00-07:00.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.1897,
+          32.7338
+        ]
+      },
+      "properties": {
+        "icao": "KSAN",
+        "iata": "SAN",
+        "name": "San Diego International Airport",
+        "city": "San Diego",
+        "elevation": 17,
+        "timezone": "America/Los_Angeles",
+        "countryCode": "US",
+        "runwayLength": 9401,
+        "status": "active",
+        "operations": {
+          "operatesH24": false,
+          "hasCurfew": true,
+          "curfewType": "HARD_CURFEW",
+          "curfewStart": "23:30",
+          "curfewEnd": "06:30",
+          "curfewPenalty": "$2,000 first offense, $6,000 second per 6-month period",
+          "noiseMonitoring": true,
+          "noiseLimit": 80,
+          "noiseLimitPeriod": "23:30-06:30",
+          "customsAvailable": true,
+          "customsH24": false,
+          "handlerMonopoly": true,
+          "handlerNames": [
+            "Signature Flight Support"
+          ],
+          "fboCount": 1,
+          "quirks": "Busiest single-runway commercial airport in US. Steep approach over downtown.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.1522,
+          36.084
+        ]
+      },
+      "properties": {
+        "icao": "KLAS",
+        "iata": "LAS",
+        "name": "Las Vegas McCarran International Airport",
+        "city": "Las Vegas",
+        "elevation": 2181,
+        "timezone": "America/Los_Angeles",
+        "countryCode": "US",
+        "runwayLength": 14510,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Signature Flight Support",
+            "Atlantic Aviation",
+            "Luxivair"
+          ],
+          "fboCount": 3,
+          "quirks": "During major events (Super Bowl, F1, CES): mandatory slots + PPR. Event fees $750-$3,000. File 4hrs+ in advance. ~1,000 bizjets for Super Bowl 2024.",
+          "permitRequired": "NONE",
+          "pprMandatory": false
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.9961,
+          61.1744
+        ]
+      },
+      "properties": {
+        "icao": "PANC",
+        "iata": "ANC",
+        "name": "Ted Stevens Anchorage International Airport",
+        "city": "Anchorage",
+        "elevation": 152,
+        "timezone": "America/Anchorage",
+        "countryCode": "US",
+        "runwayLength": 12400,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Signature Flight Support",
+            "International Aviation Service"
+          ],
+          "fboCount": 2,
+          "quirks": "Major intl fuel stop. Written PPR 24-48hrs for foreign refuel stops. De-icing essential Oct-Apr. USDA/APHIS inspection. Winter: ~5.5hrs daylight (Dec).",
+          "permitRequired": "PPR_ONLY",
+          "permitLeadDays": 1,
+          "pprMandatory": true,
+          "pprLeadHours": 24
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7781,
+          40.6398
+        ]
+      },
+      "properties": {
+        "icao": "KJFK",
+        "iata": "JFK",
+        "name": "John F. Kennedy International Airport",
+        "city": "New York",
+        "elevation": 13,
+        "timezone": "America/New_York",
+        "countryCode": "US",
+        "runwayLength": 14511,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": false,
+          "customsHours": "08:00-22:00",
+          "handlerMonopoly": true,
+          "handlerNames": [
+            "Modern Aviation"
+          ],
+          "fboCount": 1,
+          "quirks": "GA <2% of traffic. Higher fees than TEB/HPN alternatives. Single FBO at Building 145.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0096,
+          42.3656
+        ]
+      },
+      "properties": {
+        "icao": "KBOS",
+        "iata": "BOS",
+        "name": "Boston Logan International Airport",
+        "city": "Boston",
+        "elevation": 20,
+        "timezone": "America/New_York",
+        "countryCode": "US",
+        "runwayLength": 10083,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "noiseMonitoring": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": true,
+          "handlerNames": [
+            "Signature Flight Support"
+          ],
+          "fboCount": 1,
+          "parkingLimited": true,
+          "maxParkingDays": 2,
+          "parkingNotes": "Seasonal PPR April 15-Oct via Signature",
+          "quirks": "Stage 3 minimum for nighttime ops (23:00-07:00). PPR when active = max 2 days parking.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.2906,
+          25.7959
+        ]
+      },
+      "properties": {
+        "icao": "KMIA",
+        "iata": "MIA",
+        "name": "Miami International Airport",
+        "city": "Miami",
+        "elevation": 8,
+        "timezone": "America/New_York",
+        "countryCode": "US",
+        "runwayLength": 13016,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "customsLocation": "Separate FIS facility - pax taxi to FIS",
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Signature Flight Support",
+            "Atlantic Aviation",
+            "Sheltair"
+          ],
+          "fboCount": 3,
+          "quirks": "Seasonal congestion during Art Basel, Super Bowl, snowbird season. FIS separate from FBO.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.8497,
+          39.5701
+        ]
+      },
+      "properties": {
+        "icao": "KAPA",
+        "iata": "APA",
+        "name": "Centennial Airport",
+        "city": "Denver",
+        "elevation": 5885,
+        "timezone": "America/Denver",
+        "countryCode": "US",
+        "runwayLength": 10000,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": false,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Signature Flight Support",
+            "Atlantic Aviation",
+            "Meridian",
+            "Ross Aviation"
+          ],
+          "fboCount": 4,
+          "quirks": "All noise abatement voluntary (post-ANCA). Elevation 5,885 ft MSL creates significant density altitude effects. No on-airport customs.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9073,
+          41.9786
+        ]
+      },
+      "properties": {
+        "icao": "KORD",
+        "iata": "ORD",
+        "name": "Chicago O'Hare International Airport",
+        "city": "Chicago",
+        "elevation": 672,
+        "timezone": "America/Chicago",
+        "countryCode": "US",
+        "runwayLength": 13000,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": true,
+          "handlerNames": [
+            "Signature Flight Support"
+          ],
+          "fboCount": 1,
+          "quirks": "GA tiny fraction of ~2,500 movements/day. Better alternatives: KPWK (Chicago Executive), KDPA (DuPage).",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.6605,
+          33.5334
+        ]
+      },
+      "properties": {
+        "icao": "KSDL",
+        "iata": "SDL",
+        "name": "Scottsdale Airport",
+        "city": "Scottsdale",
+        "elevation": 1519,
+        "timezone": "America/Phoenix",
+        "countryCode": "US",
+        "runwayLength": 8249,
+        "status": "active",
+        "operations": {
+          "operatesH24": false,
+          "hasCurfew": true,
+          "curfewType": "ECONOMIC_DETERRENT",
+          "curfewStart": "22:00",
+          "curfewEnd": "06:00",
+          "curfewExceptions": "Voluntary curfew (discouraged)",
+          "customsAvailable": true,
+          "customsH24": false,
+          "customsHours": "09:00-19:00",
+          "customsLeadHours": 48,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Signature Flight Support",
+            "Scottsdale Air Center"
+          ],
+          "fboCount": 2,
+          "quirks": "Customs requires 48hr advance notice + prepaid user fee online. PPR for 75,001-100,000 lbs. Max wingspan 100 ft.",
+          "permitRequired": "NONE",
+          "pprMandatory": false
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.0158,
+          33.4343
+        ]
+      },
+      "properties": {
+        "icao": "KPHX",
+        "iata": "PHX",
+        "name": "Phoenix Sky Harbor International Airport",
+        "city": "Phoenix",
+        "elevation": 1135,
+        "timezone": "America/Phoenix",
+        "countryCode": "US",
+        "runwayLength": 11489,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": false,
+          "customsLeadHours": 336,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Signature Flight Support",
+            "Atlantic Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "CBP requires 2 weeks advance notice for aircraft from south of border. Most GA use KSDL or KDVT instead.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4415,
+          48.9697
+        ]
+      },
+      "properties": {
+        "icao": "LFPB",
+        "iata": "LBG",
+        "name": "Paris Le Bourget Airport",
+        "city": "Paris",
+        "elevation": 218,
+        "timezone": "Europe/Paris",
+        "countryCode": "FR",
+        "runwayLength": 9843,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": true,
+          "curfewType": "HARD_CURFEW",
+          "curfewStart": "22:15",
+          "curfewEnd": "06:00",
+          "curfewExceptions": "Departures prohibited. Arrivals accepted 24/7.",
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation France",
+            "Jetex",
+            "Dassault Falcon Service"
+          ],
+          "fboCount": 3,
+          "quirks": "No PPR for private flights. Mandatory security search by crew (captain signs form). Paris Air Show: 1/3 ramp reserved. Charter limited to ≤25 seats.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5,
+          "permitNotes": "Only for non-EU charter flights"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.7763,
+          51.2753
+        ]
+      },
+      "properties": {
+        "icao": "EGLF",
+        "iata": "FAB",
+        "name": "Farnborough Airport",
+        "city": "Farnborough",
+        "elevation": 238,
+        "timezone": "Europe/London",
+        "countryCode": "GB",
+        "runwayLength": 7946,
+        "status": "active",
+        "operations": {
+          "towerHoursStart": "07:00",
+          "towerHoursEnd": "22:00",
+          "operatesH24": false,
+          "operatingNotes": "Mon-Fri 07:00-22:00; Sat-Sun 08:00-20:00. Closed Christmas/Boxing Day. No overtime.",
+          "hasCurfew": false,
+          "noiseMonitoring": true,
+          "customsAvailable": true,
+          "customsH24": false,
+          "handlerMonopoly": true,
+          "handlerNames": [
+            "Farnborough Airport Ltd"
+          ],
+          "fboCount": 1,
+          "quirks": "UK's only dedicated bizav airport. Cap ~28,000 ops/year. Stage 4 required. Chapter 2 banned. Size limit BBJ2. Closes FIRMLY at published times.",
+          "permitRequired": "PPR_ONLY",
+          "permitNotes": "UK GAR mandatory for intl flights",
+          "pprMandatory": true
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4614,
+          51.47
+        ]
+      },
+      "properties": {
+        "icao": "EGLL",
+        "iata": "LHR",
+        "name": "London Heathrow Airport",
+        "city": "London",
+        "elevation": 83,
+        "timezone": "Europe/London",
+        "countryCode": "GB",
+        "runwayLength": 12799,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": true,
+          "curfewType": "SLOT_PROHIBITION",
+          "curfewStart": "23:30",
+          "curfewEnd": "06:00",
+          "slotsRequired": true,
+          "slotLeadHours": 2160,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": true,
+          "handlerNames": [
+            "Signature Flight Support"
+          ],
+          "fboCount": 1,
+          "quirks": "Near-impossible for GA. Slots traded for $60-75M. Request 3+ months advance. Windsor Suite: £3,000/charter. UK TCO cert required post-Brexit.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 90
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3683,
+          51.8747
+        ]
+      },
+      "properties": {
+        "icao": "EGGW",
+        "iata": "LTN",
+        "name": "London Luton Airport",
+        "city": "London",
+        "elevation": 526,
+        "timezone": "Europe/London",
+        "countryCode": "GB",
+        "runwayLength": 7087,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": true,
+          "curfewType": "SLOT_PROHIBITION",
+          "curfewStart": "22:00",
+          "curfewEnd": "05:59",
+          "curfewExceptions": "Jun 1-Sep 30: No ad hoc GA 22:00-05:59 UTC",
+          "slotsRequired": true,
+          "slotTolerance": "Zero tolerance. Fines up to £20,000",
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Harrods Aviation",
+            "Signature Flight Support"
+          ],
+          "fboCount": 2,
+          "quirks": "Most expensive London parking (>$2,000/night large-cabin). Fuel ~37% higher than Stansted.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.235,
+          51.885
+        ]
+      },
+      "properties": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "London Stansted Airport",
+        "city": "London",
+        "elevation": 348,
+        "timezone": "Europe/London",
+        "countryCode": "GB",
+        "runwayLength": 10000,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": true,
+          "curfewType": "SLOT_PROHIBITION",
+          "curfewStart": "22:00",
+          "curfewEnd": "05:59",
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation UK",
+            "Harrods Aviation",
+            "Inflite Jet Centre"
+          ],
+          "fboCount": 3,
+          "quirks": "Best value London option. Only 10 GA night slots/week 22:00-05:59 UTC. Planeside pickup allowed. No luggage screening <45 tons Part 91.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3,
+          "permitNotes": "UK GAR mandatory (£10K fine). UK ETA from Feb 25, 2026"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5481,
+          47.4647
+        ]
+      },
+      "properties": {
+        "icao": "LSZH",
+        "iata": "ZRH",
+        "name": "Zurich Airport",
+        "city": "Zurich",
+        "elevation": 1416,
+        "timezone": "Europe/Zurich",
+        "countryCode": "CH",
+        "runwayLength": 12139,
+        "status": "active",
+        "operations": {
+          "operatesH24": false,
+          "hasCurfew": true,
+          "curfewType": "HARD_CURFEW",
+          "curfewStart": "23:30",
+          "curfewEnd": "06:00",
+          "curfewExceptions": "Special auth for extraordinary events (~272/year)",
+          "noiseMonitoring": true,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": false,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Jet Aviation",
+            "ExecuJet"
+          ],
+          "fboCount": 2,
+          "quirks": "5 noise categories for jets. Noise charges CHF 15.4M (2023). Proposals to triple post-11pm surcharges. Email notifications for track deviations.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1095,
+          46.2381
+        ]
+      },
+      "properties": {
+        "icao": "LSGG",
+        "iata": "GVA",
+        "name": "Geneva Airport",
+        "city": "Geneva",
+        "elevation": 1411,
+        "timezone": "Europe/Zurich",
+        "countryCode": "CH",
+        "runwayLength": 12795,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": true,
+          "curfewType": "NOISE_RESTRICTION",
+          "curfewStart": "22:00",
+          "curfewEnd": "06:00",
+          "slotsRequired": true,
+          "slotLeadHours": 120,
+          "slotTolerance": "Zero tolerance. 19-minute blocks.",
+          "customsAvailable": true,
+          "customsH24": true,
+          "customsLocation": "Business Aviation Terminal (C3)",
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Jet Aviation",
+            "SwissPort"
+          ],
+          "fboCount": 2,
+          "quirks": "Cannot request slots >5 days advance. ICAO Chapter 4 required 22:00-06:00. Extreme congestion during WEF, UN sessions, ski season.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7682,
+          52.3105
+        ]
+      },
+      "properties": {
+        "icao": "EHAM",
+        "iata": "AMS",
+        "name": "Amsterdam Schiphol Airport",
+        "city": "Amsterdam",
+        "elevation": -11,
+        "timezone": "Europe/Amsterdam",
+        "countryCode": "NL",
+        "runwayLength": 12467,
+        "status": "active",
+        "operations": {
+          "operatesH24": false,
+          "hasCurfew": true,
+          "curfewType": "HARD_CURFEW",
+          "curfewStart": "22:00",
+          "curfewEnd": "06:00",
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": false,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Jet Support",
+            "Signature Flight Support",
+            "Universal Aviation"
+          ],
+          "fboCount": 3,
+          "quirks": "GA cap 12,000/year (down from 17,000). GA prohibited 22:00-06:00. €29.05/pax tax. Noise levy €104.50/landing. 87 aircraft types banned.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.215,
+          43.6584
+        ]
+      },
+      "properties": {
+        "icao": "LFMN",
+        "iata": "NCE",
+        "name": "Nice Côte d'Azur Airport",
+        "city": "Nice",
+        "elevation": 12,
+        "timezone": "Europe/Paris",
+        "countryCode": "FR",
+        "runwayLength": 10958,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "slotTolerance": "-5/+10 minutes",
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "ExecuJet"
+          ],
+          "fboCount": 2,
+          "parkingLimited": true,
+          "maxParkingDays": 0,
+          "parkingNotes": "3 hour max during peak events. Parking escalates exponentially.",
+          "quirks": "Europe's most congested bizav gateway in summer. Fuel shortages on weekends. APU restrictions strict. Cannes/Monaco: modifying times = back of queue.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5,
+          "pprMandatory": true
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.4584,
+          50.9014
+        ]
+      },
+      "properties": {
+        "icao": "EBBR",
+        "iata": "BRU",
+        "name": "Brussels Airport",
+        "city": "Brussels",
+        "elevation": 184,
+        "timezone": "Europe/Brussels",
+        "countryCode": "BE",
+        "runwayLength": 11936,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": true,
+          "curfewType": "HARD_CURFEW",
+          "curfewStart": "02:00",
+          "curfewEnd": "05:59",
+          "curfewExceptions": "Sat 02:00-05:59; Sun-Mon midnight-05:59",
+          "curfewPenalty": "8 days-1 year imprisonment and/or €1,000-€20,000",
+          "noiseMonitoring": true,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "ExecuJet",
+            "Universal Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "QC >8 aircraft forbidden 22:00-04:59. Severe slot violation penalties include imprisonment.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.2514,
+          41.7997
+        ]
+      },
+      "properties": {
+        "icao": "LIRA",
+        "iata": "CIA",
+        "name": "Rome Ciampino Airport",
+        "city": "Rome",
+        "elevation": 427,
+        "timezone": "Europe/Rome",
+        "countryCode": "IT",
+        "runwayLength": 7218,
+        "status": "active",
+        "operations": {
+          "towerHoursStart": "06:00",
+          "towerHoursEnd": "23:00",
+          "operatesH24": false,
+          "hasCurfew": true,
+          "curfewType": "HARD_CURFEW",
+          "curfewStart": "23:00",
+          "curfewEnd": "06:00",
+          "curfewExceptions": "State/humanitarian/emergency only",
+          "customsAvailable": true,
+          "customsH24": false,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "AviaPartner"
+          ],
+          "fboCount": 2,
+          "parkingLimited": true,
+          "parkingNotes": "No hangars. Summer: wingspan >21.4m = 24hr turnaround. Reposition to Pescara/Rimini/Bologna when full.",
+          "quirks": "PPR 24/7 - confirmation # in flight plan. All GA to Rome MUST use Ciampino during ops hours.",
+          "permitRequired": "PPR_ONLY",
+          "pprMandatory": true
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.2781,
+          45.4456
+        ]
+      },
+      "properties": {
+        "icao": "LIML",
+        "iata": "LIN",
+        "name": "Milan Linate Airport",
+        "city": "Milan",
+        "elevation": 353,
+        "timezone": "Europe/Rome",
+        "countryCode": "IT",
+        "runwayLength": 8202,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "customsLocation": "Milano Linate Prime terminal only",
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "SEA Prime",
+            "Universal Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "NOT a transit airport - non-EU = full clearance. Recent massive parking fee increases: 50-ton 3 days = €3,180. 2026 Winter Olympics disruption Feb 6-22.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.8881,
+          45.3967
+        ]
+      },
+      "properties": {
+        "icao": "LIPX",
+        "iata": "VRN",
+        "name": "Verona Villafranca Airport",
+        "city": "Verona",
+        "elevation": 239,
+        "timezone": "Europe/Rome",
+        "countryCode": "IT",
+        "runwayLength": 9186,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "AeroVeneto"
+          ],
+          "fboCount": 2,
+          "quirks": "Convenient for northern Italy. Less congested than Milan airports.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.0961,
+          59.6519
+        ]
+      },
+      "properties": {
+        "icao": "ESSA",
+        "iata": "ARN",
+        "name": "Stockholm Arlanda Airport",
+        "city": "Stockholm",
+        "elevation": 137,
+        "timezone": "Europe/Stockholm",
+        "countryCode": "SE",
+        "runwayLength": 10827,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "Aviator"
+          ],
+          "fboCount": 2,
+          "quirks": "Never closed for snow in 50+ years. World-class winter ops. De-icing Oct-Mar (sometimes Jun).",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.9633,
+          60.3172
+        ]
+      },
+      "properties": {
+        "icao": "EFHK",
+        "iata": "HEL",
+        "name": "Helsinki Vantaa Airport",
+        "city": "Helsinki",
+        "elevation": 179,
+        "timezone": "Europe/Helsinki",
+        "countryCode": "FI",
+        "runwayLength": 11286,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Airpro",
+            "Aviator Finland"
+          ],
+          "fboCount": 2,
+          "quirks": "De-icing mid-Oct through Mar (sometimes Jun). Fluid rated -34°C. 4 trucks simultaneously per aircraft. 2 de-icing areas (5 aircraft each).",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.9239,
+          60.1939
+        ]
+      },
+      "properties": {
+        "icao": "ENGM",
+        "iata": "OSL",
+        "name": "Oslo Gardermoen Airport",
+        "city": "Oslo",
+        "elevation": 681,
+        "timezone": "Europe/Oslo",
+        "countryCode": "NO",
+        "runwayLength": 11811,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Aviator",
+            "Universal Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "280 winter maintenance personnel. World's largest PSB vehicles. Expert winter operations.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.65,
+          55.6181
+        ]
+      },
+      "properties": {
+        "icao": "EKCH",
+        "iata": "CPH",
+        "name": "Copenhagen Airport",
+        "city": "Copenhagen",
+        "elevation": 17,
+        "timezone": "Europe/Copenhagen",
+        "countryCode": "DK",
+        "runwayLength": 11811,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Aviator",
+            "Signature Flight Support"
+          ],
+          "fboCount": 2,
+          "quirks": "Scandinavia's busiest airport. No curfew. Excellent winter capability.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.9445,
+          37.9364
+        ]
+      },
+      "properties": {
+        "icao": "LGAV",
+        "iata": "ATH",
+        "name": "Athens International Airport",
+        "city": "Athens",
+        "elevation": 308,
+        "timezone": "Europe/Athens",
+        "countryCode": "GR",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "slotLeadHours": 24,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Goldair Handling",
+            "Swissport",
+            "Universal Aviation"
+          ],
+          "fboCount": 3,
+          "parkingLimited": true,
+          "maxParkingDays": 0,
+          "parkingNotes": "Free parking limited to 2 hours (down from 8-12)",
+          "quirks": "NEW Level 2 slots Mar 2025. >5,700kg = mandatory slots (incl VFR). Slots confirmed day before only. Greek islands: €2,000/leg lounge fee.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.5673,
+          40.4719
+        ]
+      },
+      "properties": {
+        "icao": "LEMD",
+        "iata": "MAD",
+        "name": "Madrid Barajas Airport",
+        "city": "Madrid",
+        "elevation": 1998,
+        "timezone": "Europe/Madrid",
+        "countryCode": "ES",
+        "runwayLength": 14364,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Iberia Handling",
+            "Universal Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "Major European hub. Dedicated GA terminal. Slot-coordinated.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0785,
+          41.2971
+        ]
+      },
+      "properties": {
+        "icao": "LEBL",
+        "iata": "BCN",
+        "name": "Barcelona El Prat Airport",
+        "city": "Barcelona",
+        "elevation": 12,
+        "timezone": "Europe/Madrid",
+        "countryCode": "ES",
+        "runwayLength": 10171,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "Iberjet"
+          ],
+          "fboCount": 2,
+          "quirks": "Busy during Mobile World Congress, F1 Spanish GP. Slot-coordinated.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.3644,
+          25.2528
+        ]
+      },
+      "properties": {
+        "icao": "OMDB",
+        "iata": "DXB",
+        "name": "Dubai International Airport",
+        "city": "Dubai",
+        "elevation": 62,
+        "timezone": "Asia/Dubai",
+        "countryCode": "AE",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "slotTolerance": "±15 minutes",
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "ExecuJet Middle East",
+            "Jet Aviation",
+            "DC Aviation Al-Futtaim"
+          ],
+          "fboCount": 3,
+          "quirks": "70-75% bizav shifted to OMDW (Dubai World Central). Tech stops take longer. Fuel delays. OMAA/OBBI preferred for tech stops.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 4,
+          "permitNotes": "$115 non-refundable fee. Often 12-48hrs (UAE CAA 24/7)"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          54.6475,
+          24.433
+        ]
+      },
+      "properties": {
+        "icao": "OMAA",
+        "iata": "AUH",
+        "name": "Abu Dhabi International Airport",
+        "city": "Abu Dhabi",
+        "elevation": 88,
+        "timezone": "Asia/Dubai",
+        "countryCode": "AE",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "ExecuJet Middle East",
+            "Falcon Aviation",
+            "Royal Jet"
+          ],
+          "fboCount": 3,
+          "quirks": "Easiest ME permit. Only needs cert of airworthiness. No slots/PPR. Permits valid +72hrs, easy revisions. Al Bateen (OMAD) = dedicated bizav.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 2,
+          "permitNotes": "Simplest in region - just airworthiness cert"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.7036,
+          21.6797
+        ]
+      },
+      "properties": {
+        "icao": "OEJN",
+        "iata": "JED",
+        "name": "King Abdulaziz International Airport",
+        "city": "Jeddah",
+        "elevation": 48,
+        "timezone": "Asia/Riyadh",
+        "countryCode": "SA",
+        "runwayLength": 12467,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Saudi Private Aviation",
+            "Universal Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "Min 72hr (Universal: 3 weeks). Must provide FLs. Overflight ALWAYS required ($30). Hajj = special slot. Crew visas need sponsor (3 weeks). Halal catering 24-48hr. No alcohol.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 21,
+          "permitNotes": "Sponsor letter mandatory. Must provide flight levels."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          46.6988,
+          24.9574
+        ]
+      },
+      "properties": {
+        "icao": "OERK",
+        "iata": "RUH",
+        "name": "King Khalid International Airport",
+        "city": "Riyadh",
+        "elevation": 2049,
+        "timezone": "Asia/Riyadh",
+        "countryCode": "SA",
+        "runwayLength": 13780,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Saudi Private Aviation",
+            "ExecuJet Middle East"
+          ],
+          "fboCount": 2,
+          "quirks": "Same requirements as OEJN. Prohibits tech stops and ICAO Code F aircraft. Fuel $3.61-$3.68/USG.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 21,
+          "permitNotes": "Same as Jeddah - sponsor mandatory"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          51.6089,
+          25.2731
+        ]
+      },
+      "properties": {
+        "icao": "OTHH",
+        "iata": "DOH",
+        "name": "Hamad International Airport",
+        "city": "Doha",
+        "elevation": 13,
+        "timezone": "Asia/Qatar",
+        "countryCode": "QA",
+        "runwayLength": 15912,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "customsLocation": "Qatar Executive terminal",
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Qatar Executive",
+            "Universal Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "Local sponsor REQUIRED. Sponsor must send request directly to Qatar CAA (cannot be operator/3rd-party).",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 7,
+          "permitNotes": "Sponsor must have personal knowledge of all pax"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.2192,
+          31.9946
+        ]
+      },
+      "properties": {
+        "icao": "LLBG",
+        "iata": "TLV",
+        "name": "Ben Gurion Airport",
+        "city": "Tel Aviv",
+        "elevation": 135,
+        "timezone": "Asia/Jerusalem",
+        "countryCode": "IL",
+        "runwayLength": 11998,
+        "status": "active",
+        "operations": {
+          "operatesH24": false,
+          "operatingNotes": "ASOC closed Friday-Saturday",
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": false,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "UAS",
+            "Avia"
+          ],
+          "fboCount": 2,
+          "quirks": "Most complex ME permit. 72-96hrs. Requires: 10yr pilot employment history, full pax passports, sponsor w/personal pax knowledge (Israeli ID/passport/license). GA overflight NOT permitted - must land. ASOC-approved departure airport only.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 4,
+          "permitNotes": "Sponsor mandatory. Comprehensive security checks. Overflight prohibited."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.2346,
+          33.2625
+        ]
+      },
+      "properties": {
+        "icao": "ORBI",
+        "iata": "BGW",
+        "name": "Baghdad International Airport",
+        "city": "Baghdad",
+        "elevation": 114,
+        "timezone": "Asia/Baghdad",
+        "countryCode": "IQ",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "UAS Iraq",
+            "Universal Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "High-threat environment. Extensive security protocols. Advance coordination essential.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 10,
+          "permitNotes": "Security clearances required. Extended lead time."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          47.9689,
+          29.2267
+        ]
+      },
+      "properties": {
+        "icao": "OKBK",
+        "iata": "KWI",
+        "name": "Kuwait International Airport",
+        "city": "Kuwait City",
+        "elevation": 206,
+        "timezone": "Asia/Kuwait",
+        "countryCode": "KW",
+        "runwayLength": 11155,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Kuwait Aviation Services",
+            "Universal Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "Permits typically 5-7 working days. Overflight permits required for Kuwaiti airspace.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.2844,
+          23.5933
+        ]
+      },
+      "properties": {
+        "icao": "OOMS",
+        "iata": "MCT",
+        "name": "Muscat International Airport",
+        "city": "Muscat",
+        "elevation": 48,
+        "timezone": "Asia/Muscat",
+        "countryCode": "OM",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "ExecuJet Middle East",
+            "Oman Air"
+          ],
+          "fboCount": 2,
+          "quirks": "Good tech stop location. Competitive fuel prices. Permits 3-5 working days.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          50.6361,
+          26.2708
+        ]
+      },
+      "properties": {
+        "icao": "OBBI",
+        "iata": "BAH",
+        "name": "Bahrain International Airport",
+        "city": "Manama",
+        "elevation": 6,
+        "timezone": "Asia/Bahrain",
+        "countryCode": "BH",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "MEBA",
+            "ExecuJet Middle East"
+          ],
+          "fboCount": 2,
+          "quirks": "Popular tech stop. Permits 3-5 days. Good alternative to Dubai for positioning.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.6014,
+          -33.969
+        ]
+      },
+      "properties": {
+        "icao": "FACT",
+        "iata": "CPT",
+        "name": "Cape Town International Airport",
+        "city": "Cape Town",
+        "elevation": 151,
+        "timezone": "Africa/Johannesburg",
+        "countryCode": "ZA",
+        "runwayLength": 10502,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "ExecuJet",
+            "Aviapartner"
+          ],
+          "fboCount": 2,
+          "quirks": "3-5 working days via SA DOT/SACAA. CAA Mon-Fri 08:00-16:00 ONLY - no weekend processing. 'A mess' - last-minute denials. Weekend changes = grounded until Monday. FOP (8+ pax): 21+ days.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5,
+          "permitNotes": "SACAA Mon-Fri only. Weekend schedule changes ground aircraft."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.1513,
+          -25.6539
+        ]
+      },
+      "properties": {
+        "icao": "FAOR",
+        "iata": "JNB",
+        "name": "O.R. Tambo International Airport",
+        "city": "Johannesburg",
+        "elevation": 5558,
+        "timezone": "Africa/Johannesburg",
+        "countryCode": "ZA",
+        "runwayLength": 14495,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "ExecuJet Africa",
+            "Universal Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "Same permit issues as FACT. Lanseria (FALA) nearby - no PPR/slots for GA (recommended).",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.9278,
+          -1.3192
+        ]
+      },
+      "properties": {
+        "icao": "HKJK",
+        "iata": "NBO",
+        "name": "Jomo Kenyatta International Airport",
+        "city": "Nairobi",
+        "elevation": 5327,
+        "timezone": "Africa/Nairobi",
+        "countryCode": "KE",
+        "runwayLength": 13494,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Swissport",
+            "Universal Aviation"
+          ],
+          "fboCount": 12,
+          "quirks": "Kenya CAA online but closed weekends w/no backup. Reportedly ONE person processes permits (including medical emergencies). Known fuel availability issues (NOTAMs issued). Elevation 5,327 ft affects performance.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5,
+          "permitNotes": "CAA closed weekends - no processing"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1006,
+          29.9934
+        ]
+      },
+      "properties": {
+        "icao": "HECA",
+        "iata": "CAI",
+        "name": "Cairo International Airport",
+        "city": "Cairo",
+        "elevation": 382,
+        "timezone": "Africa/Cairo",
+        "countryCode": "EG",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "slotLeadHours": 24,
+          "customsAvailable": true,
+          "customsH24": true,
+          "customsLocation": "VIP/Royal Terminal",
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "Jetex"
+          ],
+          "fboCount": 2,
+          "quirks": "Permits 3-5 working days. Level 2 slots (24hrs advance). Overflight permits 4 business days (CAA hours 08:00-12:00 UTC only). Military airspace restrictions.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 5,
+          "permitNotes": "Overflight: 4 days, CAA 08:00-12:00 UTC only"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.3211,
+          6.5774
+        ]
+      },
+      "properties": {
+        "icao": "DNMM",
+        "iata": "LOS",
+        "name": "Murtala Muhammed International Airport",
+        "city": "Lagos",
+        "elevation": 135,
+        "timezone": "Africa/Lagos",
+        "countryCode": "NG",
+        "runwayLength": 12795,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "ExecuJet Nigeria",
+            "NAHCO"
+          ],
+          "fboCount": 2,
+          "quirks": "Feb 2026 Terminal 1 fire disrupted AIS/AFTN. Customs crackdowns on unpaid import duties (60+ jets grounded). Verify fuel quality/availability. 3rd-largest private aviation sector in Africa.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2633,
+          9.0068
+        ]
+      },
+      "properties": {
+        "icao": "DNAA",
+        "iata": "ABV",
+        "name": "Nnamdi Azikiwe International Airport",
+        "city": "Abuja",
+        "elevation": 1123,
+        "timezone": "Africa/Lagos",
+        "countryCode": "NG",
+        "runwayLength": 11811,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "ExecuJet Nigeria",
+            "NAHCO"
+          ],
+          "fboCount": 2,
+          "quirks": "Capital city airport. Similar permit requirements to Lagos. 7-day lead time typical.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.5895,
+          33.3675
+        ]
+      },
+      "properties": {
+        "icao": "GMMN",
+        "iata": "CMN",
+        "name": "Mohammed V International Airport",
+        "city": "Casablanca",
+        "elevation": 656,
+        "timezone": "Africa/Casablanca",
+        "countryCode": "MA",
+        "runwayLength": 11811,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "Swissport"
+          ],
+          "fboCount": 2,
+          "quirks": "Major North African hub. Good tech stop for trans-Atlantic. Permits 5 working days.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.8931,
+          -1.319
+        ]
+      },
+      "properties": {
+        "icao": "HKWJ",
+        "iata": "WIL",
+        "name": "Wilson Airport",
+        "city": "Nairobi",
+        "elevation": 5536,
+        "timezone": "Africa/Nairobi",
+        "countryCode": "KE",
+        "runwayLength": 4948,
+        "status": "active",
+        "operations": {
+          "operatesH24": false,
+          "towerHoursStart": "06:00",
+          "towerHoursEnd": "18:00",
+          "hasCurfew": false,
+          "customsAvailable": false,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Fly540",
+            "Tradewinds"
+          ],
+          "fboCount": 3,
+          "quirks": "Africa's busiest GA airport. Domestic/regional ops. Short runway (4,948 ft). No customs - use HKJK for international.",
+          "permitRequired": "NONE"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.6019,
+          -4.0283
+        ]
+      },
+      "properties": {
+        "icao": "HKMO",
+        "iata": "MBA",
+        "name": "Moi International Airport",
+        "city": "Mombasa",
+        "elevation": 200,
+        "timezone": "Africa/Nairobi",
+        "countryCode": "KE",
+        "runwayLength": 10991,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Swissport",
+            "Menzies Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "Coastal hub. Popular safari/leisure destination gateway. Same Kenya CAA permit issues as HKJK.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.1522,
+          36.8511
+        ]
+      },
+      "properties": {
+        "icao": "DTTA",
+        "iata": "TUN",
+        "name": "Tunis-Carthage International Airport",
+        "city": "Tunis",
+        "elevation": 22,
+        "timezone": "Africa/Tunis",
+        "countryCode": "TN",
+        "runwayLength": 10187,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "Tunisair Handling"
+          ],
+          "fboCount": 2,
+          "quirks": "Med tech stop. Permits typically 5-7 working days via Tunisian CAA.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.5846,
+          40.0801
+        ]
+      },
+      "properties": {
+        "icao": "ZBAA",
+        "iata": "PEK",
+        "name": "Beijing Capital International Airport",
+        "city": "Beijing",
+        "elevation": 116,
+        "timezone": "Asia/Shanghai",
+        "countryCode": "CN",
+        "runwayLength": 12467,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "Deer Jet"
+          ],
+          "fboCount": 2,
+          "quirks": "Min 3 business days for permits. Aircraft must be in CAAC 'Preflight' system 5 working days before permit app. Sponsor letter mandatory (Chinese, company letterhead, chop). Max 2 revisions post-approval. $3,000 CAAC compensation fee per entry. Apr 1, 2026: prepaid ATC or LOC mandatory. Tourism flights prohibited. Bizjets banned 07:00-09:00 local. 08:00-22:00 = 1 movement max per aircraft.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 3,
+          "permitNotes": "Sponsor letter w/chop mandatory. 5-day Preflight registration. $3K fee. Max 2 revisions."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.8056,
+          31.1434
+        ]
+      },
+      "properties": {
+        "icao": "ZSPD",
+        "iata": "PVG",
+        "name": "Shanghai Pudong International Airport",
+        "city": "Shanghai",
+        "elevation": 13,
+        "timezone": "Asia/Shanghai",
+        "countryCode": "CN",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "Deer Jet"
+          ],
+          "fboCount": 2,
+          "quirks": "Same complex requirements as ZBAA. C-type crew visas (VOA for Shanghai but NOT US nationals + 10 others). Restricted airways L888, Y1, Y2, Y3 unavailable to GA. China/Mongolia use meters not feet for altitude.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 3,
+          "permitNotes": "Same as Beijing - sponsor mandatory, Preflight registration, fees"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.7797,
+          35.5494
+        ]
+      },
+      "properties": {
+        "icao": "RJTT",
+        "iata": "HND",
+        "name": "Tokyo Haneda Airport",
+        "city": "Tokyo",
+        "elevation": 35,
+        "timezone": "Asia/Tokyo",
+        "countryCode": "JP",
+        "runwayLength": 9843,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "slotLeadHours": 24,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "Haneda Aviation"
+          ],
+          "fboCount": 2,
+          "parkingLimited": true,
+          "maxParkingDays": 5,
+          "parkingNotes": "2-5 days max. May need to reposition to Narita for longer stays.",
+          "quirks": "Private flights (ICAO-registered) = no landing permit. Charter = 3 days. No formal curfew for GA but 16 slots/day limit (06:00-23:00). VIP CIQ ~$2,200/use. Refueling w/pax onboard PROHIBITED (all Japan airports).",
+          "permitRequired": "NONE",
+          "permitNotes": "Private non-revenue = no permit. Charter = 3 days."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.3869,
+          35.7647
+        ]
+      },
+      "properties": {
+        "icao": "RJAA",
+        "iata": "NRT",
+        "name": "Tokyo Narita International Airport",
+        "city": "Tokyo",
+        "elevation": 141,
+        "timezone": "Asia/Tokyo",
+        "countryCode": "JP",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "towerHoursStart": "06:00",
+          "towerHoursEnd": "22:59",
+          "operatesH24": false,
+          "hasCurfew": true,
+          "curfewType": "HARD_CURFEW",
+          "curfewStart": "23:00",
+          "curfewEnd": "05:59",
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": false,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "JAL Ground Service"
+          ],
+          "fboCount": 2,
+          "quirks": "Operates 06:00-22:59 strict overnight curfew. No Western-style FBOs - GA parks on general ramps. Same Japan rules: no pax refueling, VIP CIQ fees.",
+          "permitRequired": "NONE",
+          "permitNotes": "Private = no permit. Charter = 3 days."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.9153,
+          22.3089
+        ]
+      },
+      "properties": {
+        "icao": "VHHH",
+        "iata": "HKG",
+        "name": "Hong Kong International Airport",
+        "city": "Hong Kong",
+        "elevation": 28,
+        "timezone": "Asia/Hong_Kong",
+        "countryCode": "HK",
+        "runwayLength": 12467,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "slotLeadHours": 72,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": true,
+          "handlerNames": [
+            "HKBAC"
+          ],
+          "fboCount": 1,
+          "parkingLimited": true,
+          "maxParkingDays": 14,
+          "parkingNotes": "14 days max (historically 2 days). Macau (VMMC) used as parking alternate.",
+          "quirks": "Permits for private/charter via HKCAD 3 working days (2 weeks for new ops). Slots EXTREMELY scarce - some days NO GA slots. Night slots (22:00-06:59): 6/night max. Missed slots = formal CAA letter, potential blacklist. HKBAC monopoly. Fuel only via HKBAC at premium.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3,
+          "permitNotes": "2 weeks for new operators. Strict slot compliance."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.994,
+          1.3644
+        ]
+      },
+      "properties": {
+        "icao": "WSSS",
+        "iata": "SIN",
+        "name": "Singapore Changi Airport",
+        "city": "Singapore",
+        "elevation": 22,
+        "timezone": "Asia/Singapore",
+        "countryCode": "SG",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "SATS"
+          ],
+          "fboCount": 2,
+          "quirks": "Most GA prefers Seletar (WSSL). During events like Singapore Airshow, GA may be denied at Changi entirely.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8679,
+          1.4167
+        ]
+      },
+      "properties": {
+        "icao": "WSSL",
+        "iata": "XSP",
+        "name": "Seletar Airport",
+        "city": "Singapore",
+        "elevation": 36,
+        "timezone": "Asia/Singapore",
+        "countryCode": "SG",
+        "runwayLength": 6024,
+        "status": "active",
+        "operations": {
+          "operatesH24": false,
+          "towerHoursStart": "07:30",
+          "towerHoursEnd": "22:00",
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": false,
+          "customsLocation": "Business Aviation Centre (1 movement at a time - expect delays)",
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "ExecuJet"
+          ],
+          "fboCount": 2,
+          "quirks": "Preferred for GA ops. Runway 6,024 ft handles up to B757-200 size. IS-BAH accredited. Fuel hours: Mon-Fri 07:30-22:00; Sat-Sun 08:30-17:30 (overtime charges after-hours). CIQ at BAC = 1 aircraft at a time.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.1025,
+          28.5665
+        ]
+      },
+      "properties": {
+        "icao": "VIDP",
+        "iata": "DEL",
+        "name": "Indira Gandhi International Airport",
+        "city": "Delhi",
+        "elevation": 777,
+        "timezone": "Asia/Kolkata",
+        "countryCode": "IN",
+        "runwayLength": 14764,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Delhi Aviation Services",
+            "Bird Worldwide"
+          ],
+          "fboCount": 2,
+          "quirks": "Non-scheduled flights = DGCA/CCA permits. Standard: 3 working days (op on 4th day). Prior Reference Countries (China, Pakistan, Afghanistan, etc): 7 working days. Overflight: 48hrs min. GA apron limited. Customs = document-driven (incomplete paperwork = delays/fines). Private aircraft personal use: up to 40% GST.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 3,
+          "permitNotes": "7 days for Prior Reference Countries. Overflight: 48hrs."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.8679,
+          19.0896
+        ]
+      },
+      "properties": {
+        "icao": "VABB",
+        "iata": "BOM",
+        "name": "Chhatrapati Shivaji Maharaj International Airport",
+        "city": "Mumbai",
+        "elevation": 39,
+        "timezone": "Asia/Kolkata",
+        "countryCode": "IN",
+        "runwayLength": 11493,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Bird Worldwide",
+            "Taj SATS"
+          ],
+          "fboCount": 2,
+          "parkingLimited": true,
+          "quirks": "Same India permit requirements. GA apron space limited. Slot-coordinated.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.1772,
+          -33.9461
+        ]
+      },
+      "properties": {
+        "icao": "YSSY",
+        "iata": "SYD",
+        "name": "Sydney Kingsford Smith Airport",
+        "city": "Sydney",
+        "elevation": 21,
+        "timezone": "Australia/Sydney",
+        "countryCode": "AU",
+        "runwayLength": 12999,
+        "status": "active",
+        "operations": {
+          "operatesH24": false,
+          "hasCurfew": true,
+          "curfewType": "HARD_CURFEW",
+          "curfewStart": "23:00",
+          "curfewEnd": "06:00",
+          "curfewPenalty": "AUD $850,000 fine",
+          "curfewExceptions": "Curfew-exempt: ≤34,000kg MTOW at DEPARTURE point (not landing weight)",
+          "customsAvailable": true,
+          "customsH24": false,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "ExecuJet Sydney",
+            "Signature Flight Support"
+          ],
+          "fboCount": 2,
+          "quirks": "Sydney Airport Curfew Act 1995 (legislated). G650/Global Express may NOT qualify for curfew ops when carrying significant fuel. Movement cap: 80/hour. Mandatory aircraft disinsection (4 methods). Strict DAFF biosecurity - declare all food/plants/animals.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3,
+          "permitNotes": "Arrival outside working hours: 5 days advance. Non-approved airport: 10 days."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.785,
+          -37.0081
+        ]
+      },
+      "properties": {
+        "icao": "NZAA",
+        "iata": "AKL",
+        "name": "Auckland Airport",
+        "city": "Auckland",
+        "elevation": 23,
+        "timezone": "Pacific/Auckland",
+        "countryCode": "NZ",
+        "runwayLength": 11926,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": false,
+          "customsLeadHours": 120,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "ExecuJet New Zealand",
+            "Skyline Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "Place of First Arrival approval required. After-hours/outside-approved-airport: 5 working days. Non-approved airports: 10 working days. Mandatory disinsection (all aircraft). MPI biosecurity clearance before pax/crew deplane. Crew must remain onboard until clearance.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5,
+          "permitNotes": "POFA approval required. 10 days for non-approved airports."
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.7551,
+          -16.8736
+        ]
+      },
+      "properties": {
+        "icao": "YBCS",
+        "iata": "CNS",
+        "name": "Cairns Airport",
+        "city": "Cairns",
+        "elevation": 10,
+        "timezone": "Australia/Brisbane",
+        "countryCode": "AU",
+        "runwayLength": 10495,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Execujet Cairns",
+            "Hawker Pacific"
+          ],
+          "fboCount": 2,
+          "quirks": "Popular intl entry point for northern Australia. Mandatory disinsection. DAFF biosecurity inspections.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.9672,
+          -31.9403
+        ]
+      },
+      "properties": {
+        "icao": "YPPH",
+        "iata": "PER",
+        "name": "Perth Airport",
+        "city": "Perth",
+        "elevation": 67,
+        "timezone": "Australia/Perth",
+        "countryCode": "AU",
+        "runwayLength": 11319,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "ExecuJet Perth",
+            "Hawker Pacific"
+          ],
+          "fboCount": 2,
+          "quirks": "Gateway to Western Australia. Mandatory disinsection. Good tech stop for Asia-Australia routing.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.7472,
+          13.69
+        ]
+      },
+      "properties": {
+        "icao": "VTBS",
+        "iata": "BKK",
+        "name": "Suvarnabhumi Airport",
+        "city": "Bangkok",
+        "elevation": 5,
+        "timezone": "Asia/Bangkok",
+        "countryCode": "TH",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "Thai Aviation Services"
+          ],
+          "fboCount": 2,
+          "quirks": "Commercial airport. Don Mueang (VTBD) strongly preferred for GA - has MJets private terminal (IS-BAO/IS-BAH). VTBD consistently lowest fuel in region.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          100.6069,
+          13.9125
+        ]
+      },
+      "properties": {
+        "icao": "VTBD",
+        "iata": "DMK",
+        "name": "Don Mueang International Airport",
+        "city": "Bangkok",
+        "elevation": 9,
+        "timezone": "Asia/Bangkok",
+        "countryCode": "TH",
+        "runwayLength": 11483,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "customsLocation": "MJets Private Terminal",
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "MJets",
+            "Universal Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "PREFERRED Bangkok airport for GA. MJets private terminal = IS-BAO/IS-BAH accredited. Consistently lowest fuel prices in region. Royal Thai Air Force base (shared civilian/military).",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          98.3031,
+          7.8803
+        ]
+      },
+      "properties": {
+        "icao": "VTSP",
+        "iata": "HKT",
+        "name": "Phuket International Airport",
+        "city": "Phuket",
+        "elevation": 82,
+        "timezone": "Asia/Bangkok",
+        "countryCode": "TH",
+        "runwayLength": 9843,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "Phuket Air"
+          ],
+          "fboCount": 2,
+          "quirks": "Major leisure destination. Seasonal congestion Dec-Feb. Permits 3-5 working days.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          101.7099,
+          3.1303
+        ]
+      },
+      "properties": {
+        "icao": "WMKK",
+        "iata": "KUL",
+        "name": "Kuala Lumpur International Airport",
+        "city": "Kuala Lumpur",
+        "elevation": 69,
+        "timezone": "Asia/Kuala_Lumpur",
+        "countryCode": "MY",
+        "runwayLength": 13123,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation",
+            "Seletar Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "Good tech stop. Sultan Abdul Aziz Shah (WMSA/Subang) nearby = dedicated GA airport (preferred for overnight/longer stays).",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.6558,
+          -6.1256
+        ]
+      },
+      "properties": {
+        "icao": "WIII",
+        "iata": "CGK",
+        "name": "Soekarno-Hatta International Airport",
+        "city": "Jakarta",
+        "elevation": 34,
+        "timezone": "Asia/Jakarta",
+        "countryCode": "ID",
+        "runwayLength": 12008,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation Indonesia",
+            "JAS"
+          ],
+          "fboCount": 2,
+          "quirks": "Permits 5-7 working days. Overflight permits also required. Document-heavy customs process.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.0197,
+          14.5086
+        ]
+      },
+      "properties": {
+        "icao": "RPLL",
+        "iata": "MNL",
+        "name": "Ninoy Aquino International Airport",
+        "city": "Manila",
+        "elevation": 75,
+        "timezone": "Asia/Manila",
+        "countryCode": "PH",
+        "runwayLength": 11286,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation Philippines",
+            "PAS"
+          ],
+          "fboCount": 2,
+          "quirks": "Heavily slot-constrained. Permits 5-7 working days. Clark (RPLC) 50nm north = good GA alternative.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4506,
+          33.5111
+        ]
+      },
+      "properties": {
+        "icao": "RKPC",
+        "iata": "CJU",
+        "name": "Jeju International Airport",
+        "city": "Jeju",
+        "elevation": 118,
+        "timezone": "Asia/Seoul",
+        "countryCode": "KR",
+        "runwayLength": 9843,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation Korea",
+            "Korean Air"
+          ],
+          "fboCount": 2,
+          "quirks": "Popular leisure destination. World's busiest single-runway airport (domestic traffic). Permits 3-5 working days.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4603,
+          36.7167
+        ]
+      },
+      "properties": {
+        "icao": "RKSI",
+        "iata": "ICN",
+        "name": "Incheon International Airport",
+        "city": "Seoul",
+        "elevation": 23,
+        "timezone": "Asia/Seoul",
+        "countryCode": "KR",
+        "runwayLength": 12303,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "customsLocation": "Business Aviation Center",
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation Korea",
+            "IIAC"
+          ],
+          "fboCount": 2,
+          "quirks": "Gimpo (RKSS) closer to Seoul but domestic-focused. Permits 3-5 working days.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.8081,
+          10.8188
+        ]
+      },
+      "properties": {
+        "icao": "VVTS",
+        "iata": "SGN",
+        "name": "Tan Son Nhat International Airport",
+        "city": "Ho Chi Minh City",
+        "elevation": 33,
+        "timezone": "Asia/Ho_Chi_Minh",
+        "countryCode": "VN",
+        "runwayLength": 9843,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "slotsRequired": true,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "VIAGS",
+            "Universal Aviation Vietnam"
+          ],
+          "fboCount": 2,
+          "quirks": "Permits 7-10 working days. Visa requirements strict. Overflight permits also required.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 10
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8019,
+          21.2212
+        ]
+      },
+      "properties": {
+        "icao": "VVNB",
+        "iata": "HAN",
+        "name": "Noi Bai International Airport",
+        "city": "Hanoi",
+        "elevation": 39,
+        "timezone": "Asia/Ho_Chi_Minh",
+        "countryCode": "VN",
+        "runwayLength": 11811,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "VIAGS",
+            "Universal Aviation Vietnam"
+          ],
+          "fboCount": 2,
+          "quirks": "Same Vietnam permit requirements. Capital city airport. 7-10 working day permits.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 10
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          80.0728,
+          6.8222
+        ]
+      },
+      "properties": {
+        "icao": "VCBI",
+        "iata": "CMB",
+        "name": "Bandaranaike International Airport",
+        "city": "Colombo",
+        "elevation": 30,
+        "timezone": "Asia/Colombo",
+        "countryCode": "LK",
+        "runwayLength": 10663,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation Sri Lanka",
+            "Expo Aviation"
+          ],
+          "fboCount": 2,
+          "quirks": "Good Indian Ocean tech stop. Permits 5-7 working days. Ratmalana (VCCC) = secondary GA airport closer to city.",
+          "permitRequired": "LANDING_PERMIT",
+          "permitLeadDays": 7
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.0911,
+          33.6169
+        ]
+      },
+      "properties": {
+        "icao": "OPRN",
+        "iata": "ISB",
+        "name": "Islamabad International Airport",
+        "city": "Islamabad",
+        "elevation": 1668,
+        "timezone": "Asia/Karachi",
+        "countryCode": "PK",
+        "runwayLength": 11155,
+        "status": "active",
+        "operations": {
+          "operatesH24": true,
+          "hasCurfew": false,
+          "customsAvailable": true,
+          "customsH24": true,
+          "handlerMonopoly": false,
+          "handlerNames": [
+            "Universal Aviation Pakistan",
+            "Shaheen Airport Services"
+          ],
+          "fboCount": 2,
+          "quirks": "Permits 7-10 working days (Pakistan = Prior Reference Country for India). Security requirements strict. Overflight permits required.",
+          "permitRequired": "BOTH_PERMITS",
+          "permitLeadDays": 10,
+          "permitNotes": "Prior Reference Country - extended timelines"
+        }
+      }
+    }
+  ]
+}
