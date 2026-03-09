@@ -4,6 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import Map from "../components/Map";
 import AircraftInputSidebar from "../components/AircraftInputSidebar";
 import AirportDetailPanel from "../components/AirportDetailPanel";
+import CandidateStopCards from "../components/CandidateStopCards";
 import { rangeNm } from "../lib/fuelCalculator";
 import { buildRangeCircle } from "../lib/rangeCalculator";
 import type {
@@ -39,6 +40,7 @@ export default function Home() {
   const [filters, setFilters] = useState<ActiveWarningFilters>({ categories: [], types: [] });
   const [selectedAirportId, setSelectedAirportId] = useState<string | null>(null);
   const [candidateAirports, setCandidateAirports] = useState<StopCandidate[]>([]);
+  const [selectedCandidates, setSelectedCandidates] = useState<StopCandidate[]>([]);
   const [isEvaluating, setIsEvaluating] = useState(false);
 
   // Coords lookup provided by Map after it loads airport data
@@ -68,11 +70,40 @@ export default function Home() {
     []
   );
 
+  // ── Airport click: open detail panel + toggle candidate card ──────────
+  function handleAirportClick(id: string) {
+    setSelectedAirportId(id);
+
+    // If Find Stops has run and this airport is a candidate, toggle it in/out of the shortlist
+    if (candidateAirports.length > 0) {
+      const candidate = candidateAirports.find((c) => c.airportId === id);
+      if (candidate) {
+        setSelectedCandidates((prev) => {
+          const already = prev.some((c) => c.airportId === id);
+          return already ? prev.filter((c) => c.airportId !== id) : [...prev, candidate];
+        });
+      }
+    }
+  }
+
+  // ── Candidate toggle from detail panel button ─────────────────────────
+  function handleToggleCandidate(candidate: StopCandidate) {
+    // Prefer the richer Find Stops data if this airport was evaluated
+    const richVersion = candidateAirports.find((c) => c.airportId === candidate.airportId);
+    const toAdd = richVersion ?? candidate;
+    setSelectedCandidates((prev) =>
+      prev.some((c) => c.airportId === toAdd.airportId)
+        ? prev.filter((c) => c.airportId !== toAdd.airportId)
+        : [...prev, toAdd]
+    );
+  }
+
   // ── Stop evaluation ───────────────────────────────────────────────────
   async function handleFindStops() {
     if (!departureIcao || computedRangeNm === 0) return;
     setIsEvaluating(true);
     setCandidateAirports([]);
+    setSelectedCandidates([]);
 
     try {
       const body: StopEvaluationRequest = {
@@ -124,7 +155,7 @@ export default function Home() {
       <div className="flex-1 relative">
         <Map
           selectedAirportId={selectedAirportId}
-          onAirportClick={setSelectedAirportId}
+          onAirportClick={handleAirportClick}
           onMapDeselect={() => setSelectedAirportId(null)}
           rangeCircleGeoJSON={rangeCircleGeoJSON}
           candidateAirports={candidateAirports}
@@ -140,9 +171,43 @@ export default function Home() {
             fuelCard={flightContext.fuelCard}
             fuelLbs={aircraftInputs.fuelLbs}
             fuelDensityLbsPerGal={aircraftInputs.fuelDensityLbsPerGal}
+            isAddedAsCandidate={selectedCandidates.some((c) => c.airportId === selectedAirportId)}
+            onToggleCandidate={handleToggleCandidate}
             onClose={() => setSelectedAirportId(null)}
           />
         )}
+
+        {/* Candidate stop cards strip */}
+        <CandidateStopCards
+          candidates={selectedCandidates}
+          onCardClick={(id) => setSelectedAirportId(id)}
+          onRemove={(id) =>
+            setSelectedCandidates((prev) => prev.filter((c) => c.airportId !== id))
+          }
+        />
+
+        {/* Fuel rate legend */}
+        <div className="absolute bottom-8 left-4 z-10 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-lg px-3 py-2.5 pointer-events-none">
+          <div className="text-[9px] uppercase tracking-wider text-gray-500 mb-1.5">Fuel Rate ($/gal)</div>
+          <div className="space-y-1.5">
+            {[
+              { color: "#22c55e", label: "< $6.50" },
+              { color: "#84cc16", label: "$6.50–$7.50" },
+              { color: "#eab308", label: "$7.50–$8.50" },
+              { color: "#f97316", label: "$8.50–$10.00" },
+              { color: "#dc2626", label: "> $10.00" },
+              { color: "#6b7280", label: "No data" },
+            ].map(({ color, label }) => (
+              <div key={label} className="flex items-center gap-2">
+                <span
+                  className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                  style={{ backgroundColor: color }}
+                />
+                <span className="text-[10px] text-gray-400">{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </main>
   );

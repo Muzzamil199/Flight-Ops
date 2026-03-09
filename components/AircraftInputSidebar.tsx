@@ -37,7 +37,7 @@ interface Props {
 
 function FieldLabel({ children }: { children: React.ReactNode }) {
   return (
-    <span className="text-[10px] text-gray-500 uppercase tracking-wider">{children}</span>
+    <span className="text-[10px] text-gray-400 uppercase tracking-wider">{children}</span>
   );
 }
 
@@ -77,7 +77,7 @@ export default function AircraftInputSidebar({
             onChange={(e) => onDepartureIcaoChange(e.target.value.toUpperCase())}
             placeholder="ICAO e.g. KTEB"
             maxLength={4}
-            className="bg-gray-800 border-gray-700 text-white placeholder:text-gray-600 h-8 text-sm uppercase"
+            className="bg-gray-800 border-gray-700 text-white placeholder:text-gray-400 h-8 text-sm uppercase"
           />
         </div>
 
@@ -162,7 +162,7 @@ export default function AircraftInputSidebar({
             {rangeNm > 0 ? `${rangeNm.toLocaleString()} NM` : "—"}
           </span>
         </div>
-        <p className="text-[10px] text-gray-600 -mt-2">No reserve applied — maximum theoretical range</p>
+        <p className="text-[10px] text-gray-400 -mt-2">No reserve applied — maximum theoretical range</p>
 
         <Separator className="bg-gray-800" />
 
@@ -171,7 +171,7 @@ export default function AircraftInputSidebar({
           <FieldLabel>Flight Settings</FieldLabel>
 
           <div className="space-y-1">
-            <Label className="text-[10px] text-gray-600">Type</Label>
+            <Label className="text-[10px] text-gray-400">Type</Label>
             <Select
               value={flightContext.flightType}
               onValueChange={(v: string | null) =>
@@ -189,7 +189,7 @@ export default function AircraftInputSidebar({
           </div>
 
           <div className="space-y-1">
-            <Label className="text-[10px] text-gray-600">Category</Label>
+            <Label className="text-[10px] text-gray-400">Category</Label>
             <Select
               value={flightContext.flightCategory}
               onValueChange={(v: string | null) =>
@@ -207,7 +207,7 @@ export default function AircraftInputSidebar({
           </div>
 
           <div className="space-y-1">
-            <Label className="text-[10px] text-gray-600">Fuel Card</Label>
+            <Label className="text-[10px] text-gray-400">Fuel Card</Label>
             <Select
               value={flightContext.fuelCard}
               onValueChange={(v: string | null) =>
@@ -227,7 +227,7 @@ export default function AircraftInputSidebar({
           </div>
 
           <div className="space-y-1">
-            <Label className="text-[10px] text-gray-600">Departure Time (UTC)</Label>
+            <Label className="text-[10px] text-gray-400">Departure Time (UTC)</Label>
             <Input
               type="datetime-local"
               value={flightContext.departureTimeUtc.slice(0, 16)}

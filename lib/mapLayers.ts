@@ -19,8 +19,15 @@ export const AIRPORT_CIRCLES_LAYER: Omit<CircleLayerSpecification, "id"> = {
     ],
     "circle-color": [
       "case",
-      ["==", ["get", "status"], "active"], "#00d4aa",
-      "#ff4444",
+      // Inactive airports: dark gray regardless of fuel data
+      ["!=", ["get", "status"], "active"], "#374151",
+      // Active airports: color by cheapest fuel price tier
+      ["<", ["coalesce", ["get", "cheapestFuelPerGal"], -1], 0], "#6b7280",  // no data → gray
+      ["<", ["get", "cheapestFuelPerGal"], 6.5],  "#22c55e",  // < $6.50 → green
+      ["<", ["get", "cheapestFuelPerGal"], 7.5],  "#84cc16",  // $6.50–$7.50 → lime
+      ["<", ["get", "cheapestFuelPerGal"], 8.5],  "#eab308",  // $7.50–$8.50 → yellow
+      ["<", ["get", "cheapestFuelPerGal"], 10.0], "#f97316",  // $8.50–$10 → orange
+      "#dc2626",                                               // > $10 → red
     ],
     "circle-stroke-width": 1.5,
     "circle-stroke-color": "#ffffff",
@@ -33,7 +40,7 @@ export const AIRPORT_CIRCLES_LAYER: Omit<CircleLayerSpecification, "id"> = {
 export const AIRPORT_LABELS_LAYER: Omit<SymbolLayerSpecification, "id"> = {
   type: "symbol",
   source: "airports",
-  minzoom: 5,
+  minzoom: 3,
   layout: {
     "text-field": ["get", "icao"],
     "text-size": 11,

@@ -6,6 +6,11 @@ export async function GET() {
     const airports = await prisma.airport.findMany({
       include: {
         operations: true,
+        fuelPrices: {
+          where: { isLive: true },
+          orderBy: { price: "asc" },
+          take: 1,
+        },
       },
     });
 
@@ -52,6 +57,7 @@ export async function GET() {
             warningCounts: counts,
             hasError: counts.ERROR > 0,
             hasWarning: counts.WARNING > 0,
+            cheapestFuelPerGal: airport.fuelPrices[0]?.price ?? null,
           },
         };
       }),
